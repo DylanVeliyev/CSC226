@@ -1,0 +1,46 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+
+<head>
+    <script type="text/javascript">
+        function handleSubmit() {
+            // Get the input value
+            let inputValue = document.getElementById("submit").value;
+
+            // Alert the user with the input value
+            alert("You entered: " + inputValue);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let submitButton = document.getElementById("submitButton");
+            let colors = ["red", "green", "blue", "purple", "orange"];
+            let colorIndex = 0;
+
+            submitButton.addEventListener("click", function () {
+                // Change the button color in a cycle
+                submitButton.style.backgroundColor = colors[colorIndex];
+                colorIndex = (colorIndex + 1) % colors.length;
+            });
+        });
+    </script>
+    <style>
+        #submitButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="submit">
+        <br><br>
+        <button id="submitButton" type="button" onclick="handleSubmit()">Submit</button>
+    </form>
+</body>
+
+</html>
