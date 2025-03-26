@@ -1,0 +1,24 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+
+<head>
+  <style>
+    #hiText {
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="colorButton">Click Me</button>
+  <p id="hiText">This button says hi to you</p>
+
+  <script>
+    document.getElementById("colorButton").addEventListener("click", function () {
+      document.getElementById("hiText").style.color = "blue";
+      alert("Sup dude");
+    });
+  </script>
+</body>
+
+</html>
